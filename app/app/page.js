@@ -20,7 +20,7 @@ export default function Home() {
       {role: 'user', content:message},
       {role: 'assistant', content: ''},
     ])
-  }
+  
   const response= fetch('/api/chat',
     {
       method: "POST",
@@ -52,8 +52,8 @@ export default function Home() {
       })
       return reader.read().then(processText)
   })
-})
-
+ })
+}
 
   return(
   <Box 
