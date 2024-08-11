@@ -27,7 +27,7 @@ export default function Home() {
       headers:{
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify([...messages, {role:'user',content:message}])
+      body: JSON.stringify([...messages, {role:'user',content: message}])
     }
   ).then(async (res) => {
     const reader = res.body.getReader()
@@ -49,8 +49,8 @@ export default function Home() {
             content:lastMessage.content + text,
           },
         ]
-      })
-      return reader.read().then(processText)
+    })
+    return reader.read().then(processText)
   })
  })
 }
